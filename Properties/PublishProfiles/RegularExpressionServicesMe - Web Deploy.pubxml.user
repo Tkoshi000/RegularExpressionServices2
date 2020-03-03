@@ -6,6 +6,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\Proj_Git\RegularExpressionServices2\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAYCJ/+HoGXEivPhTSHMq2bAAAAAACAAAAAAAQZgAAAAEAACAAAAA2xCzWeEBTuRbikCMA2ZYjizazNV+kiTqQ4kEY07KCGwAAAAAOgAAAAAIAACAAAABGjoZ+ExpnvMRHXhWTblsunZ4hQar9aO/UzXaZDcQ2R4AAAACsU6s7dtEEcjDPqsftVz60yiE8rOqjnC56uEiDhbaTUsT67lq4yEo+HFtx3rZm4ds0zbLxI3zktati6gzT82mUlzBQdFgpmGQYP75Uat+gx8dzA/xlyAZeaUER0VcNs6qKfpCAeRKEhN/wsPjLJc+fuwuS83DpnRrZ7frxpE3KfUAAAAD523VqO00U/oSVgLo9zg8C70ZKSxU8l4Dq1pnK9Dr4iFgpVt6kNmPx+upXmJPc+jvgSGD8rnM4iLeJcPZhfr0C</EncryptedPassword>
   </PropertyGroup>
 </Project>
