@@ -1,0 +1,41 @@
+﻿@page
+@model RegularExpressionServices2.Pages.ExmpleofuseModel
+@{
+    ViewData["Title"] = "使用例";
+}
+
+<h3>使用例一覧</h3>
+
+<table border="3" rules="all" align="center" style="width:100%;">
+    <tr>
+        <th>パターン対象文字列</th>
+        <th>パターン</th>
+        <th>説明</th>
+    </tr>
+    <tr>
+        <td>12.34 34.56 7.89 13000</td>
+        <td><code>(?&lt;a&gt;\\d+(\\.\\d+)?)\\s+(?&lt;b&gt;\\d+(\\.\\d+)?)\\s+(?&lt;c&gt;\\d+(\\.\\d+)?)\\s+(?&lt;d&gt;\\d+(\\.\\d+)?)</code></td>
+        <td>a,b,c,dそれぞれをグループ化</td>
+    </tr>
+    <tr>
+        <td>1.60×80×40×5500</td>
+        <td><code>(?&lt;b&gt;\\d+(\\.\\d+)?)\\s+(?&lt;c&gt;\\d+)\\s+(?&lt;d&gt;\\d+)\\s+(?&lt;e&gt;\\d+)</code></td>
+        <td>b,c,d,eそれぞれをグループ化</td>
+    </tr>
+    <tr>
+        <td>1.3+ 4.5 12 000</td>
+        <td><code>(?&lt;b&gt;\\d+(\\.\\d+)?)\\s+(?&lt;c&gt;\\d+(\\.\\d+)?)\\s+(?&lt;d&gt;\\d{2})\\s+(?&lt;e&gt;\\d{3})</code></td>
+        <td>b,c,d,eそれぞれをグループ化</td>
+    </tr>
+    <tr>
+        <td>7.5 13 000 <br> 7.5A 13 000</td>
+        <td><code>(?&lt;c&gt;\\d+(\\.\\d+)?[aA])\\s+(?&lt;td&gt;\\d+(\\.\\d+)?)\\s+(?&lt;e&gt;\\d{3})</code></td>
+        <td>c,d,eそれぞれをグループ化</td>
+    </tr>
+    <tr>
+        <td>20 20</td>
+        <td><code>(?&lt;c&gt;\\d+)\\s+(?&lt;d&gt;\\d+)</code></td>
+        <td>c,dそれぞれをグループ化</td>
+    </tr>
+</table>
+

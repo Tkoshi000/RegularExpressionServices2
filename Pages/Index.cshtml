@@ -2,41 +2,77 @@
 @using System.Diagnostics
 @model IndexModel
 @{
-    ViewData["Title"] = "Execute";
+    ViewData["Title"] = "ExecuteWindow";
 
 }
-@functions{
-    string Excecute(string s, string e)
-    {
-
-        Process.Start(@"exe\Regularexpression.exe");
-
-        return "";
-    }
-}
-<script src="~/js/FireBaseScript.js"></script>
-<div class="text-center">
-    <text></text>
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-left">
+    <h4>正規表現変換テスト</h4>
 </div>
 
 <form>
 
-    <div class="text-center">
-        <textarea id="change" name="change" placeholder="変換前">@Model.change</textarea>
+    <div class="text-left">
+        <label>チェック文字列:</label>
+        <textarea id="change" name="change" placeholder="例：10x10" style="width:100%;">@Model.change</textarea>
+    </div>
+
+    <div class="text-left">
+        <label>パターン文字列:</label>
+        <input name="pattern" placeholder="正規表現パターン 例：^\d{2}x\d{2}$" style="width:100%;" value="@Model.pattern" />
     </div>
 
     <div class="text-center">
-        <input name="pattern" placeholder="正規表現" value="@Model.pattern" />
+        <input type="submit" class="btn btn-primary btn btn-primary btn-lg" style="margin:auto;" value="↓↓正規表現テスト↓↓" />
+    </div>
+    <div class="text-left">
+        <label>結果:</label>
+        <textarea placeholder="チェック後" style="width:100%;">@Model.result</textarea>
     </div>
 
-    <div class="text-center">
-        <input type="submit" value="変換" />
-    </div>
-    <div class="text-center">
-        <textarea placeholder="変換後">@Model.result</textarea>
-
-    </div>
 </form>
+
+<div class="text-center">
+    <h4>C#正規表現リスト</h4>
+</div>
+<table border="3" rules="all" align="center" style="width:50%;">
+    <tr>
+        <th>パターン</th>
+        <th>内容</th>
+    </tr>
+    <tr>
+        <td>\d</td>
+        <td>10進数</td>
+    </tr>
+    <tr>
+        <td>\D</td>
+        <td>10進数以外</td>
+    </tr>
+    <tr>
+        <td>\s</td>
+        <td>空白文字</td>
+    </tr>
+    <tr>
+        <td>\S</td>
+        <td>空白文字以外</td>
+    </tr>
+    <tr>
+        <td>^</td>
+        <td>先頭文字</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>0文字以上</td>
+    </tr>
+    <tr>
+        <td>+</td>
+        <td>1文字以上</td>
+    </tr>
+</table>
+
+<div class="text-center">
+    <p>※実際に記述する時は\を追加で書くか@@"\d"と記載</p>
+    <a href="https://docs.microsoft.com/ja-jp/dotnet/standard/base-types/regular-expressions">.netframworkリファレンス</a>
+</div>
+
+
 

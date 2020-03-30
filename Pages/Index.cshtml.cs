@@ -26,24 +26,31 @@ namespace RegularExpressionServices2.Pages
         {
             this.change = change;
             this.pattern = pattern;
-
-            if (true &&
+            try
+            {
+                if (true &&
                 (
                 this.change == null ||
                 this.pattern == null))
-            {
-                return;
-            }
-            var Match = Regex.Match(this.change, this.pattern);
+                {
+                    return;
+                }
+                var Match = Regex.Match(this.change, this.pattern);
 
-            if (Match.Success == true)
-            {
-                this.result = this.change;
+                if (Match.Success == true)
+                {
+                    this.result = this.change;
+                }
+                else
+                {
+                    this.result = "";
+                }
             }
-            else
+            catch (Exception error)
             {
-                this.result = "";
+
             }
+            
             
         }
     }
